@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>WebCampBackendNew</title>
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="vmASJSJXvdP1KZEpU6PRxHDrlJ/qqJ7PVNl5GAU6bUiXuwGP+sFarzuXQyxj1NLctjIPSs2wyPUUCNPn/VCmew==" />
+
+    <link rel="stylesheet" href="books.scss">
+    <script src="/assets/application-114264dd93c8ff30e4335b71eed7949d66c4e7a8eb62e2de6284c046fe07104b.js" data-turbolinks-track="reload"></script>
+  </head>
+
+  <body>
+    <p id="notice"></p>
+    <h1>Editing Book</h1>
+
+<%= form_with model: @book do |f| %>
+
+<div class="field">
+  <label for="book_title">Title</label>
+  <%= f.text_field :title %>
+</div>
+<div class="field">
+  <label for="book_body">Body</label>
+  <%= f.text_area :body %>
+</div>
+
+  <%= f.submit 'Update Book' %>
+
+<% end %>
+<span>
+  <%= link_to "Show", book_path(@book.id) %> |
+  <%= link_to "Back", books_path %>
+</span>
+
+</body>
