@@ -22,6 +22,22 @@ pre {
     padding: 10px;
     font-size: 11px
 }
+.error-explanation{
+    width: 450px;
+    padding: 7px;
+    padding-bottom: 0;
+    margin-bottom: 20px;
+}
+.errors{
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0;
+    background-color: #c00;
+    color: #fff
+}
 
 a {
     color: #000
@@ -57,7 +73,8 @@ div.field,div.actions {
 .field_with_errors {
     padding: 2px;
     background-color: red;
-    display: table
+    display: table;
+    border: 2px solid red;
 }
 
 #error_explanation {
@@ -88,6 +105,8 @@ div.field,div.actions {
 label {
     display: block
 }
+
+
 .flash-message{
   color: green;
    font-family: verdana, arial, helvetica, sans-serif;
