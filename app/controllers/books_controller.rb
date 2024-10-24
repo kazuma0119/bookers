@@ -1,6 +1,5 @@
 class BooksController < ApplicationController
   def create
-    # １.&2. データを受け取り新規登録するためのインスタンス作成
     @book = Book.new(book_params)
     if @book.save
       flash[:notice] = "Book was successfully created."
@@ -26,6 +25,7 @@ class BooksController < ApplicationController
   def update
     @book=Book.find(params[:id])
     if @book.update(book_params)
+      flash[:notice] = "Book was successfully updated."
        redirect_to book_path(@book.id)
      else
         @books=Book.all
@@ -41,7 +41,6 @@ class BooksController < ApplicationController
   end
 
   private
-  # ストロングパラメータ
   def book_params
     params.require(:book).permit(:title, :body)
   end
